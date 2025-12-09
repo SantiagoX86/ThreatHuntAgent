@@ -5,6 +5,10 @@ This project will be a reconstruction of LogN Pacific Threat Hunter using most
 '''
 
 '''
+SantiCyberPirate account has been added
+'''
+
+'''
 1. User Inputs::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 This will initiate the program as various inputs will be obtained from the user,
 including:
