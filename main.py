@@ -5,6 +5,16 @@ This project will be a reconstruction of LogN Pacific Threat Hunter using most
 '''
 
 '''
+Imports
+'''
+# Python standard modules
+# Third-party libraries
+# local modules
+from input_validation import UserInputs
+
+
+
+'''
 SantiCyberPirate account has been added
 '''
 
@@ -28,6 +38,21 @@ This section may be a feeder to the following py files:
 - OpenAI Prompt Generator
 Possibly create a user interface down the road
 '''
+
+# Define expected pattern for OpenAI API Key
+openAI_key_pattern = r"^sk-.{10,}$"
+# Define expected pattern for Azure Log Analytics Workspace ID
+azure_log_an_ws_pattern = r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+# Define expected pattern for description of suspicious behavior
+prompt_pattern = r'^\S.*$'
+# Prompt user to enter their OpenAI API Key
+openAI_key = UserInputs("OpenAI API Key", openAI_key_pattern).validate_inp()
+# Prompt User to enter their Azure Log Analytics Workspace ID
+log_an_ws_ID = UserInputs("Azure Log_Analytics Workspace ID", azure_log_an_ws_pattern).validate_inp()
+# Prompt User to enter a description of the suspected malicious behavior
+initial_prompt = UserInputs("description of the suspected malicious behavior on your system", prompt_pattern).validate_inp()
+# Prompt User to select a
+
 
 '''
 2. Model selector:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
